@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+{{ navTitle }}
+{% endblock %}
+
+{% block content %}
+
+<div class="columns is-multiline">
+    {% for data in datas %}
+
+    <div class="column is-half">
+
+        <a href="{{ path('test-detail', {id: data.test_group_id}) }}">
+            <div
+                class="notification has-text-centered {% if data.has_product_passed_test == 1 %}is-success{% else %}is-danger{% endif %}">
+                <p> NOM DU GROUPE DE TESTS :</p>
+                {{ data.name }}
+
+                <div class="box">
+                    <p>RÉFÉRENCE EMPLOYÉ :</p>
+                    {{ data.reference_employee }}
+
+                    <br>
+
+                    <p>NOM DU PRODUIT :</p>
+                    {{ data.pname }}
+                </div>
+            </div>
+        </a>
+    </div>
+
+    {% endfor %}
+</div>
+
+{% endblock %}

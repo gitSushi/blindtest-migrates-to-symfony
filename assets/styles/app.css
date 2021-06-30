@@ -1,0 +1,9 @@
+.border {
+    border: 6px solid black;
+    border-radius: 12px;
+    padding: 3em;
+}
+
+.inline-block {
+    display: inline-block;
+}
