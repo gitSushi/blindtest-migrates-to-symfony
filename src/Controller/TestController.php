@@ -12,8 +12,6 @@ class TestController extends AbstractController
     #[Route('/testgroup/form', name: 'testgroup-form')]
     public function index(TestGroupRepository $tgRepo): Response
     {
-        var_dump($tgRepo->getNativeHistory());
-
         return $this->render('test-group/testGroup.html.twig', [
             'navTitle' => 'CRÉATION DE TESTS',
             'tests' => 'test',
