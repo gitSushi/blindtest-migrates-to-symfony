@@ -1,0 +1,4 @@
+# app/config/config.yml
+twig:
+    form_themes:
+        - ':Form:fields.html.twig'

@@ -13,13 +13,13 @@ class TestGroupRepository extends ServiceEntityRepository
         parent::__construct($registry, TestGroup::class);
     }
 
-    public function getHistory()
+    public function getProducts()
     {
-        return $this->createQueryBuilder('q')
-            ->select(array('tg', 'prod'))
-            ->from('TestGroup', 'tg')
-            ->innerJoin('tg.product', 'prod', 'WITH', 'prod.id = 20')
-            ->getQuery()
+        return $this
+            ->getEntityManager()
+            ->createQuery(
+                "SELECT p FROM App\Entity\Product p"
+            )
             ->getResult();
     }
 }
