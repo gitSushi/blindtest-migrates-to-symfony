@@ -1,0 +1,33 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+{{ navTitle }}
+{% endblock %}
+
+{% block content %}
+
+
+
+<nav class="panel pb-4">
+    <p class="panel-heading">
+        Création d'un groupe de tests
+    </p>
+    {{ form_start(form) }}
+    {% form_theme form 'test-group/fields.html.twig' %}
+
+
+    {#
+    <div class="panel-block">
+        <div class="field is-flex-grow-5">
+            {{ form_label(form.name, 'Nom du groupe de tests *', {'label_attr':
+            {'class': 'label'}}) }}
+            {{ form_widget(form.name, {'attr': {'class': 'control has-icons-left
+            has-icons-right'}}) }}
+        </div>
+    </div>
+    #}
+
+    {{ form_end(form) }}
+
+</nav>
+{% endblock %}

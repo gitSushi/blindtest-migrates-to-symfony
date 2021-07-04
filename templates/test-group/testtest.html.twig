@@ -1,0 +1,20 @@
+{% extends "base.html.twig" %}
+
+{% block title %}
+{{ navTitle }}
+{% endblock %}
+
+{% block content %}
+
+{{ form_start(form) }}
+
+<h3>Employees</h3>
+<ul class="tags">
+    {% for tag in form.employee %}
+    <li>{{ form_row(tag.firstname) }}</li>
+    {% endfor %}
+</ul>
+
+{{ form_end(form) }}
+
+{% endblock %}

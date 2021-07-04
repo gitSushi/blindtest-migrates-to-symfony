@@ -25,6 +25,6 @@ services:
     # please note that last definitions always *replace* previous ones
 
     form.type.datalist_type:
-        class: Acme\Form\Type\DatalistType
+        class: App\Form\Type
         tags:
             -  { name: form.type, alias: datalist }

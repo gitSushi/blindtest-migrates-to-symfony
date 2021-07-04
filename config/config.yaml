@@ -1,4 +1,2 @@
-# app/config/config.yml
 twig:
-    form_themes:
-        - ':Form:fields.html.twig'
+    form_themes: ['test-group/fields.html.twig']
